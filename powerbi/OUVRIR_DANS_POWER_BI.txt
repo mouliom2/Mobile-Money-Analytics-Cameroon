@@ -1,0 +1,7 @@
+1. Décompressez complètement le repository.
+2. Ouvrez le dossier powerbi.
+3. Double-cliquez sur Mobile_Money_Analytics_Cameroon.pbip.
+4. Si les visuels sont vides à la première ouverture : Accueil > Actualiser.
+5. Vous pouvez ensuite enregistrer une copie au format .pbix.
+
+Les données sont intégrées au modèle sous forme synthétique.

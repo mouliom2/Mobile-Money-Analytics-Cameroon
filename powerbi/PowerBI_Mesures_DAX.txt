@@ -1,0 +1,76 @@
+-- PROJET 02 — MOBILE MONEY ANALYTICS CAMEROON
+
+Nombre de Transactions =
+COUNTROWS(MobileMoneyTable)
+
+Transactions Réussies =
+CALCULATE(
+    [Nombre de Transactions],
+    MobileMoneyTable[Status] = "Success"
+)
+
+Transactions Échouées =
+CALCULATE(
+    [Nombre de Transactions],
+    MobileMoneyTable[Status] = "Failed"
+)
+
+Taux Succès =
+DIVIDE([Transactions Réussies], [Nombre de Transactions], 0)
+
+Taux Echec =
+DIVIDE([Transactions Échouées], [Nombre de Transactions], 0)
+
+Valeur Transactions =
+CALCULATE(
+    SUM(MobileMoneyTable[Amount_FCFA]),
+    MobileMoneyTable[Status] = "Success"
+)
+
+Montant Moyen =
+DIVIDE([Valeur Transactions], [Transactions Réussies], 0)
+
+Frais Générés =
+SUM(MobileMoneyTable[Fee_FCFA])
+
+Commissions Agents =
+SUM(MobileMoneyTable[Agent_Commission_FCFA])
+
+Revenu Net =
+SUM(MobileMoneyTable[Net_Revenue_FCFA])
+
+Revenu par Transaction =
+DIVIDE([Revenu Net], [Transactions Réussies], 0)
+
+Clients Actifs =
+DISTINCTCOUNT(MobileMoneyTable[Client_ID])
+
+Agents Actifs =
+DISTINCTCOUNT(MobileMoneyTable[Agent_ID])
+
+Valeur MTN =
+CALCULATE([Valeur Transactions], MobileMoneyTable[Operator] = "MTN MoMo")
+
+Part MTN MoMo =
+DIVIDE([Valeur MTN], [Valeur Transactions], 0)
+
+Valeur Orange =
+CALCULATE([Valeur Transactions], MobileMoneyTable[Operator] = "Orange Money")
+
+Part Orange Money =
+DIVIDE([Valeur Orange], [Valeur Transactions], 0)
+
+Valeur Cash Out =
+CALCULATE([Valeur Transactions], MobileMoneyTable[Transaction_Type] = "Cash Out")
+
+Part Cash Out =
+DIVIDE([Valeur Cash Out], [Valeur Transactions], 0)
+
+Transactions USSD =
+CALCULATE([Nombre de Transactions], MobileMoneyTable[Channel] = "USSD")
+
+Part USSD =
+DIVIDE([Transactions USSD], [Nombre de Transactions], 0)
+
+Frais / Transaction =
+DIVIDE([Frais Générés], [Transactions Réussies], 0)

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "00000000000000000130",
+  "position": {
+    "x": 24,
+    "y": 80,
+    "z": 10,
+    "height": 126,
+    "width": 1226,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MobileMoneyTable"
+                    }
+                  },
+                  "Property": "Valeur Transactions"
+                }
+              },
+              "queryRef": "MobileMoneyTable.Valeur Transactions",
+              "nativeQueryRef": "Valeur Transactions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MobileMoneyTable"
+                    }
+                  },
+                  "Property": "Revenu Net"
+                }
+              },
+              "queryRef": "MobileMoneyTable.Revenu Net",
+              "nativeQueryRef": "Revenu Net"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MobileMoneyTable"
+                    }
+                  },
+                  "Property": "Taux Succès"
+                }
+              },
+              "queryRef": "MobileMoneyTable.Taux Succès",
+              "nativeQueryRef": "Taux Succès"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MobileMoneyTable"
+                    }
+                  },
+                  "Property": "Montant Moyen"
+                }
+              },
+              "queryRef": "MobileMoneyTable.Montant Moyen",
+              "nativeQueryRef": "Montant Moyen"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

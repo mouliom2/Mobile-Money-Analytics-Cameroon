@@ -1,0 +1,10 @@
+relationship 62eee645-2bb8-45c2-a50d-a0c8fa2593a1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: MobileMoneyTable.DateTime
+	toColumn: LocalDateTable_955a49aa-42a1-40ab-b18b-788f7ea1d3f1.Date
+
+relationship a40acd26-3bc5-4361-aca0-e3289b5ae6ba
+	joinOnDateBehavior: datePartOnly
+	fromColumn: MobileMoneyTable.Date
+	toColumn: LocalDateTable_9deadbd5-4573-416f-90ce-17e7fefe3b0a.Date
+

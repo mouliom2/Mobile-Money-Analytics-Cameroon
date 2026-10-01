@@ -1,0 +1,16 @@
+{
+  "name": "Mobile Money Cameroon Analytics",
+  "dataColors": [
+    "#00695C",
+    "#00897B",
+    "#43A047",
+    "#F9A825",
+    "#EF6C00",
+    "#546E7A",
+    "#5E35B1",
+    "#039BE5"
+  ],
+  "background": "#F7F9FC",
+  "foreground": "#1F1F1F",
+  "tableAccent": "#00695C"
+}

@@ -1,0 +1,20 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["MobileMoneyTable"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table MobileMoneyTable
+ref table DateTableTemplate_f3692e44-3827-4247-883b-52447a58f76e
+ref table LocalDateTable_955a49aa-42a1-40ab-b18b-788f7ea1d3f1
+ref table LocalDateTable_9deadbd5-4573-416f-90ce-17e7fefe3b0a
+
